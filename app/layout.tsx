@@ -37,7 +37,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <ToggleMode />
+            <nav className="sticky top-0 z-50 flex justify-end p-4">
+              <ToggleMode />
+            </nav>
             {children}
           </ThemeProvider>
         </body>
