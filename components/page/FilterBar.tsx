@@ -11,6 +11,7 @@ import {
 interface FilterBarProps {
     searchTerm: string;
     setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+    category: string;
     categories: string[];
     setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
     showCategoryDropdown: boolean;
@@ -21,6 +22,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
     searchTerm,
     setSearchTerm,
     categories,
+    category,
     setSelectedCategory,
     showCategoryDropdown,
     setShowCategoryDropdown
@@ -31,7 +33,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
             <DropdownMenu open={showCategoryDropdown} onOpenChange={setShowCategoryDropdown}>
                 <DropdownMenuTrigger asChild>
                     <Button variant="outline">
-                        Skills
+                        {category}
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="m-4 bg-popover border border-border shadow-md">

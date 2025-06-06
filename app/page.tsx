@@ -19,7 +19,8 @@ export default function Home() {
       <FilterBar 
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        categories={Object.keys(topicData) as TopicCategory[]}
+        category={selectedCategory}
+        categories={["All", ...(Object.keys(topicData) as TopicCategory[])]}
         setSelectedCategory={(category) => setSelectedCategory(category as TopicCategory)}
         showCategoryDropdown={showCategoryDropdown}
         setShowCategoryDropdown={setShowCategoryDropdown}
@@ -27,7 +28,7 @@ export default function Home() {
       <FilteredTopics
         selectedCategory={selectedCategory}
         searchTerm={searchTerm}
-        onSelect={(topic) => handleTopicSelect(topic.title)}
+        onSelect={(topic) => handleTopicSelect(topic.url)}
       />
     </main>
   );

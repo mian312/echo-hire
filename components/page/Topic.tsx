@@ -23,8 +23,8 @@ const Topic: React.FC<TopicProps> = ({ Icon, Title, Time, onClick }) => {
                         <Image 
                             src={Icon} 
                             alt={Title} 
-                            width={40} 
-                            height={40}
+                            width={60} 
+                            height={60}
                             className="object-contain"
                         />
                     </div>
@@ -44,7 +44,7 @@ const Topic: React.FC<TopicProps> = ({ Icon, Title, Time, onClick }) => {
                 </div>
             </CardHeader>
             <CardFooter className="pt-0 pb-6">
-                <button className="w-full bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors">
+                <button className="w-full bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors" onClick={onClick}>
                     Start Now
                 </button>
             </CardFooter>
